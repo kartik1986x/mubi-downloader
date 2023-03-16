@@ -11,9 +11,6 @@ This is a Python script that allows users to download movies from the Mubi strea
 1. Clone the repository or download the zip file.
 2. Install the required libraries using pip. Run the following command in your terminal:
 pip install requests
-
-markdown
-Copy code
 3. Install Widevine DRM. Follow the instructions on the [Widevine website](https://www.widevine.com/).
 
 ## Usage
@@ -23,8 +20,6 @@ Copy code
 4. Run the following command in your terminal:
 python mubi_downloader.py
 
-csharp
-Copy code
 5. Enter the desired filename for your downloaded movie when prompted.
 
 ## Legal Notice
