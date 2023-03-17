@@ -111,7 +111,7 @@ for filename in os.listdir(folder_path):
     # If the file name matches the regex pattern
     if re.match(regex_pattern, filename):
         # Extract the language code from the file name
-        letters = re.search(re.escape(name) + r"\.([a-zA-Z]{2})\.m4a", filename).group(1)
+        letters = re.search(re.escape(name) + r"\.([a-zA-Z]{2,})\.m4a", filename).group(1)
         # Run shaka-packager to decrypt the audio file
         os.system(fr'shaka-packager in="{folder_path}/{name}.{letters}.m4a",stream=audio,output="{dest_dir}/decrypted-audio.{letters}.m4a" --enable_raw_key_decryption --keys {decryption_key}')
         os.remove(f"{folder_path}/{name}.{letters}.m4a")
