@@ -76,7 +76,7 @@ headers = {
 # Set the JSON data for the request
 json_data = {
     'license': 'https://lic.drmtoday.com/license-proxy-widevine/cenc/?specConform=true',  # Set the license URL
-    'headers': 'dt-custom-data: ', # add yours here
+    'headers': 'dt-custom-data: ADDHERE', # add yours here
     'pssh': f'{pssh}',                                                
     'buildInfo': '',                                                 
     'proxy': '',                                                      
