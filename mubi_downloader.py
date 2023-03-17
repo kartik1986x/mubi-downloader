@@ -94,7 +94,7 @@ print(decryption_key)
 decryption_key = f'key_id={decryption_key}'
 decryption_key = decryption_key.replace(":",":key=")
 # Download the video using N_m3u8DL-RE
-folder_path = f"E:/uncomplete"
+folder_path = f"ADDHERE" # Make this a valid path to a folder
 os.system(fr'N_m3u8DL-RE "{mubi}" --auto-select --save-name "{name}" --auto-select --save-dir {folder_path} --tmp-dir {folder_path}/temp')
 # Run shaka-packager to decrypt the video file
 dest_dir = f"{folder_path}/{name}"
