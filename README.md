@@ -15,7 +15,11 @@ Mubi is a streaming service that offers a carefully curated selection of movies 
 
 ## Installation
 1. Clone the repository or download the zip file.
-2. Install the required libraries.
+2. Install the required libraries using one of the following methods:
+    * Run the 'install_requirements.bat' file, if you have pip installed.
+    * Manually install each library specified in 'requirements.txt'.
+    * Run 'pip install -r requirements.txt' to install all the required libraries.
+
 ## Usage
 
 1. Open the `mubi_downloader.py` file in a text editor.
@@ -29,7 +33,7 @@ Mubi is a streaming service that offers a carefully curated selection of movies 
 
     Now copy the value for the header "dt-custom-data: " and paste it into the corresponding one in the script.
 
-3. Edit the folder paths (in the code) to your needs.
+3. Edit the folder paths (in the code) to your needs. This can be a tedious process but make sure everything matches, you can do this by testing the code and analyzing your results.
 4. Open your terminal and navigate to the directory containing the `mubi_downloader.py` file. (or add it to PATH)
 5. Run the following command in your terminal:
 
