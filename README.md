@@ -30,7 +30,6 @@ Now copy the value for the header "dt-custom-data: " and paste it into the corre
 4. Run the following command in your terminal:
 python mubi_downloader.py
 5. If you entered all the details correctly, your movie will start downloading.
-https://ipfs.io/ipfs/QmWCGJdDm2BJNfvpZqJ1BEyzETjhaSXZyPXGmRaUgQs24k/chrome_U8o6SZglfY.webp
 
 ## Legal Notice
 - This program is intended solely for educational and informational purposes. The authors and contributors of this program do not condone or encourage any illegal or unethical activities. Any misuse of this program for unlawful or unethical purposes is strictly prohibited.
