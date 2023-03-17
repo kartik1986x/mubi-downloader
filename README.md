@@ -12,7 +12,7 @@ When running the script, no user input is required other than editing the code.
 
 ## Installation
 1. Clone the repository or download the zip file.
-2. Install the required libraries using pip.
+2. Install the required libraries.
 ## Usage
 1. Open the `mubi_downloader.py` file in a text editor.
 2. Replace all the 'ADDHERE' strings with the relevant data, you can get it by watching your network traffic when streaming a movie from MUBI.
