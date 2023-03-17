@@ -1,6 +1,7 @@
 # Mubi Downloader
 
-This is a Python script that allows users to download movies from the Mubi streaming service. It uses the Mubi API to extract the video URL and encryption key, and then uses Widevine DRM to download and decrypt the video.
+This is a Python script that allows users to download movies from the Mubi streaming service. It uses the Mubi API to extract the video URL and decryption key, and then uses Widevine DRM to download and decrypt the video.
+When running the script, no user input is required other than editing the code.
 
 ## Table of Contents
 - [Installation](#installation)
