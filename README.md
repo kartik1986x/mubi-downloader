@@ -23,16 +23,7 @@ Mubi is a streaming service that offers a carefully curated selection of movies 
 ## Usage
 
 1. Open the `mubi_downloader.py` file in a text editor.
-2. Replace all the 'ADDHERE' strings with the relevant data, you can get it by watching your network traffic when streaming a movie from MUBI. You can get most of these elements from a single URL, for example, filter for the word "viewing" and you'll get this:
-
-    ![Screenshot for tutorial](https://ipfs.io/ipfs/Qmay9U6SVYjexUkZyDiyNoyDNXgwiAgYD833avk48pURxk/chrome_ZmPg6AOny9.webp)
-
-    Now you already have your movie ID (in the url) and the Authorization Bearer (in the headers). From there, search for "cenc":
-
-    ![Screenshot for tutorial](https://ipfs.io/ipfs/QmWCGJdDm2BJNfvpZqJ1BEyzETjhaSXZyPXGmRaUgQs24k/chrome_U8o6SZglfY.webp)
-
-    Now copy the value for the header "dt-custom-data: " and paste it into the corresponding one in the script.
-
+2. Replace all the 'ADDHERE' strings with the relevant data, which can be obtained by watching your network traffic when streaming a movie from MUBI. Most of these elements can be obtained from a single URL. For example, to get the movie ID (in the URL) and the Authorization Bearer (in the headers), filter for the word "viewing" in the URL. Then, search for "cenc" to get the value for the header "dt-custom-data:". Copy this value and paste it into the corresponding one in the script.
 3. Edit the folder paths (in the code) to your needs. This can be a tedious process but make sure everything matches, you can do this by testing the code and analyzing your results.
 4. Open your terminal and navigate to the directory containing the `mubi_downloader.py` file. (or add it to PATH)
 5. Run the following command in your terminal:
