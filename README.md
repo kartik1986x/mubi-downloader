@@ -1,13 +1,17 @@
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Kanopy_logo.png/800px-Kanopy_logo.png?" alt="Kanopy Logo" width="200"/>
+<img src="https://mubi.com/MUBI-logo.png" alt="Mubi Logo" width="200"/>
 
-## Kanopy Downloader
+## Mubi Downloader
 
-"Kanopy downloader" allows you to download videos from Kanopy, a streaming platform for movies, documentaries, and more. Also decrypts and both video and audio files, and downloads the subtitles for the movie.
+"Mubi Downloader" is a Python script that allows users to download movies from the Mubi streaming service. It uses the Mubi API to extract the video URL and decryption key, and then decrypts it using shaka-packager.
 
 ## Table of Contents
+- [Introduction](#Introduction)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Legal Notice](#legal-notice)
+
+## Introduction
+Mubi is a streaming service that offers a carefully curated selection of movies from around the world. However, the platform restricts users from downloading the movies to their devices. Fortunately, this script bypasses that restriction and allows users to download movies from MUBI for offline viewing.
 
 ## Installation
 1. Clone the repository or download the zip file.
@@ -29,14 +33,16 @@
 
 ## Usage
 
-1. Open 'headers.py` file in a text editor.
-2. Play the movie on Kanopy which you want to download, search for "plays" in your network traffic, copy that url as CURL (bash), paste into curlconverter.com, copy both the headers and json_data, and paste into the python file.
+1. Open the `mubi_downloader.py` file in a text editor.
+2. Replace all the 'ADDHERE' strings with the relevant data, which can be obtained by watching your network traffic when streaming a movie from MUBI. Most of these elements can be obtained from a single URL. 
+   - For example, to get the movie ID (in the URL) and the Authorization Bearer (in the headers), filter for the word "viewing" in your network traffic manager. 
+   - Then, search for "cenc" to get the value for the header "dt-custom-data:". Copy this value and paste it into the corresponding one in the script.
 3. Edit the folder path, and thats it.
-4. Open your terminal and navigate to the directory containing the `kanopy_downloader.py` file. (or add it to PATH)
+4. Open your terminal and navigate to the directory containing the `mubi_downloader.py` file. (or add it to PATH)
 5. Run the following command in your terminal:
 
     ```
-    python kanopy_downloader.py
+    python mubi_downloader.py
     ```
 
 6. If you entered all the details correctly, your movie will start downloading.
