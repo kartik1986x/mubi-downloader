@@ -20,9 +20,11 @@ Mubi is a streaming service that offers a carefully curated selection of movies 
 1. Open the `mubi_downloader.py` file in a text editor.
 2. Replace all the 'ADDHERE' strings with the relevant data, you can get it by watching your network traffic when streaming a movie from MUBI.
 You can get most of these elements from a single URL, for example, filter for the word "viewing" and you'll get this
+
 [screenshot](https://ipfs.io/ipfs/Qmay9U6SVYjexUkZyDiyNoyDNXgwiAgYD833avk48pURxk/chrome_ZmPg6AOny9.webp)
 Now you already have your movie ID (in the url) and the Authorization Bearer (in the headers)
 From there, search for "cenc"
+
 [screenshot 2](https://ipfs.io/ipfs/QmWCGJdDm2BJNfvpZqJ1BEyzETjhaSXZyPXGmRaUgQs24k/chrome_U8o6SZglfY.webp)
 Now copy the value for the header "dt-custom-data: " and paste it into the corresponding one in the script.
 3. Edit the folder paths (in the code) to your needs.
