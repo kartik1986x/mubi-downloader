@@ -2,7 +2,7 @@
 
 ## Mubi Downloader
 
-The Mubi Downloader is a Python script that allows users to download movies from the Mubi streaming service. It uses the Mubi API to extract the video URL and decryption key, and then decrypts it using shaka-packager.
+"Mubi Downloader" is a Python script that allows users to download movies from the Mubi streaming service. It uses the Mubi API to extract the video URL and decryption key, and then decrypts it using shaka-packager.
 
 ## Table of Contents
 - [Introduction](#Introduction)
