@@ -15,8 +15,8 @@ The Mubi Downloader is a Python script that allows users to download movies from
 ## Usage
 1. Open the `mubi_downloader.py` file in a text editor.
 2. Replace all the 'ADDHERE' strings with the relevant data, you can get it by watching your network traffic when streaming a movie from MUBI.
-3. Edit the folder paths to your needs.
-3. Open your terminal and navigate to the directory containing the `mubi_downloader.py` file.
+3. Edit the folder paths (in the code) to your needs.
+3. Open your terminal and navigate to the directory containing the `mubi_downloader.py` file. (or add it to PATH)
 4. Run the following command in your terminal:
 python mubi_downloader.py
 5. If you entered all the details correctly, your movie will start downloading.
