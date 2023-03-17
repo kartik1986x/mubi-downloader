@@ -14,7 +14,7 @@ headers = {
     'authority': 'api.mubi.com',
     'accept': '*/*',
     'accept-language': 'en',
-    'authorization': 'Bearer ADDHERE', # add yours here
+    'authorization': 'Bearer ADDHERE', # add the authorization token here
     'client': 'web',
     'client-accept-audio-codecs': 'aac',
     'client-accept-video-codecs': 'h265,vp9,h264',
@@ -32,7 +32,7 @@ headers = {
 }
 
 # Make a GET request to the specified URL with the given headers, and load the response JSON into a dictionary
-response = requests.get('https://api.mubi.com/v3/films/ADDHERE/viewing/secure_url', headers=headers) #add yours here
+response = requests.get('https://api.mubi.com/v3/films/ADDHERE/viewing/secure_url', headers=headers) # mubi movie ID goes here
 mubi = json.loads(response.text)
 
 # Extract the video title and secure URL from the response
@@ -75,7 +75,7 @@ headers = {
 # Set the JSON data for the request
 json_data = {
     'license': 'https://lic.drmtoday.com/license-proxy-widevine/cenc/?specConform=true',
-    'headers': 'dt-custom-data: ADDHERE', # add yours here
+    'headers': 'dt-custom-data: ADDHERE', # add your encoded headers, starts with "ey"
     'pssh': f'{pssh}',                                                
     'buildInfo': '',                                                 
     'proxy': '',                                                      
