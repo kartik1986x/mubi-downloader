@@ -19,6 +19,7 @@ Mubi is a streaming service that offers a carefully curated selection of movies 
     * Run the 'install_requirements.bat'
     * Manually install each library specified in 'requirements.txt'.
     * Run 'pip install -r requirements.txt'
+3. Install shaka-packager and N_m3u8DL-RE
 
 ## Usage
 
