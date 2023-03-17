@@ -93,11 +93,10 @@ result = re.search(r"[a-z0-9]{16,}:[a-z0-9]{16,}", str(response.text))
 decryption_key = result.group()
 decryption_key = f'key_id={decryption_key}'
 decryption_key = decryption_key.replace(":",":key=")
-
 # Download the video using N_m3u8DL-RE
-os.system(fr'N_m3u8DL-RE "{mubi}" --auto-select --save-name {name} --auto-select --save-dir E:\uncomplete --tmp-dir E:\uncomplete\temp')
+os.system(fr'N_m3u8DL-RE "{mubi}" --auto-select --save-name "{name}" --auto-select --save-dir E:\uncomplete --tmp-dir E:\uncomplete\temp')
 # Run shaka-packager to decrypt the video file
-os.system(fr'shaka-packager in=E:\uncomplete\{name}.mp4,stream=video,output=E:\uncomplete\{name}\decrypted-video.mp4 --enable_raw_key_decryption --keys {decryption_key}')  # The decrypted video file will be saved in E:\uncomplete\{name}\decrypted-video.mp4
+os.system(fr'shaka-packager in="E:\uncomplete\{name}.mp4",stream=video,output=E:\uncomplete\{name}\decrypted-video.mp4 --enable_raw_key_decryption --keys {decryption_key}')  # The decrypted video file will be saved in E:\uncomplete\{name}\decrypted-video.mp4
 
 # Set the folder path to the directory where the audio files are located
 folder_path = f"E:/uncomplete"
@@ -112,4 +111,4 @@ for filename in os.listdir(folder_path):
         # Extract the language code from the file name
         letters = re.search(re.escape(name) + r"\.([a-zA-Z]{2})\.m4a", filename).group(1)
         # Run shaka-packager to decrypt the audio file
-        os.system(fr'shaka-packager in=E:\uncomplete\{name}.{letters}.m4a,stream=audio,output=E:\uncomplete\{name}\decrypted-audio.{letters}.m4a --enable_raw_key_decryption --keys {decryption_key}')
+        os.system(fr'shaka-packager in="E:\uncomplete\{name}.{letters}.m4a",stream=audio,output=E:\uncomplete\{name}\decrypted-audio.{letters}.m4a --enable_raw_key_decryption --keys {decryption_key}')
