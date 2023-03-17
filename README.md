@@ -11,7 +11,7 @@ The Mubi Downloader is a Python script that allows users to download movies from
 - [Legal Notice](#legal-notice)
 
 ## Introduction
-Mubi is a streaming service that offers a carefully curated selection of movies from around the world. While the service allows users to watch movies online, it does not offer a download option. This script allows users to download movies from the Mubi service for offline viewing.
+Mubi is a streaming service that offers a carefully curated selection of movies from around the world. However, the platform restricts users from downloading the movies to their devices. Fortunately, this script bypasses that restriction and allows users to download movies from MUBI for offline viewing.
 
 ## Installation
 1. Clone the repository or download the zip file.
