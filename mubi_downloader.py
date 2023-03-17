@@ -90,24 +90,29 @@ result = re.search(r"[a-z0-9]{16,}:[a-z0-9]{16,}", str(response.text))
 
 # Get the decryption key and format it properly
 decryption_key = result.group()
+print(decryption_key)
 decryption_key = f'key_id={decryption_key}'
 decryption_key = decryption_key.replace(":",":key=")
 # Download the video using N_m3u8DL-RE
-os.system(fr'N_m3u8DL-RE "{mubi}" --auto-select --save-name "{name}" --auto-select --save-dir E:\uncomplete --tmp-dir E:\uncomplete\temp')
-# Run shaka-packager to decrypt the video file
-os.system(fr'shaka-packager in="E:\uncomplete\{name}.mp4",stream=video,output=E:\uncomplete\{name}\decrypted-video.mp4 --enable_raw_key_decryption --keys {decryption_key}')  # The decrypted video file will be saved in E:\uncomplete\{name}\decrypted-video.mp4
-
-# Set the folder path to the directory where the audio file is located
 folder_path = f"E:/uncomplete"
+os.system(fr'N_m3u8DL-RE "{mubi}" --auto-select --save-name "{name}" --auto-select --save-dir {folder_path} --tmp-dir {folder_path}/temp')
+# Run shaka-packager to decrypt the video file
+dest_dir = f"{folder_path}/{name}"
+os.system(fr'shaka-packager in="{folder_path}/{name}.mp4",stream=video,output="{dest_dir}/decrypted-video.mp4" --enable_raw_key_decryption --keys {decryption_key}')  # The decrypted video file will be saved in E:\uncomplete\{name}\decrypted-video.mp4
 
 # Define a regex pattern to match the audio file names
 regex_pattern = re.escape(name) + r"\.[a-z]{2}\.m4a"
-
 # Loop through all files in the folder_path directory
 for filename in os.listdir(folder_path):
+    if filename.endswith(".srt") and name in filename:
+        source_path = os.path.join(folder_path, filename)
+        dest_path = os.path.join(dest_dir, filename)
+        shutil.move(source_path, dest_path)
     # If the file name matches the regex pattern
     if re.match(regex_pattern, filename):
         # Extract the language code from the file name
         letters = re.search(re.escape(name) + r"\.([a-zA-Z]{2})\.m4a", filename).group(1)
         # Run shaka-packager to decrypt the audio file
-        os.system(fr'shaka-packager in="E:\uncomplete\{name}.{letters}.m4a",stream=audio,output=E:\uncomplete\{name}\decrypted-audio.{letters}.m4a --enable_raw_key_decryption --keys {decryption_key}')
+        os.system(fr'shaka-packager in="{folder_path}/{name}.{letters}.m4a",stream=audio,output="{dest_dir}/decrypted-audio.{letters}.m4a" --enable_raw_key_decryption --keys {decryption_key}')
+        os.remove(f"{folder_path}/{name}.{letters}.m4a")
+        os.remove(f"{folder_path}/{name}.mp4")
