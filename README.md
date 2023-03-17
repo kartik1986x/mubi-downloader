@@ -17,19 +17,27 @@ Mubi is a streaming service that offers a carefully curated selection of movies 
 1. Clone the repository or download the zip file.
 2. Install the required libraries.
 ## Usage
+
 1. Open the `mubi_downloader.py` file in a text editor.
-2. Replace all the 'ADDHERE' strings with the relevant data, you can get it by watching your network traffic when streaming a movie from MUBI.
-You can get most of these elements from a single URL, for example, filter for the word "viewing" and you'll get this
-<img src="https://ipfs.io/ipfs/Qmay9U6SVYjexUkZyDiyNoyDNXgwiAgYD833avk48pURxk/chrome_ZmPg6AOny9.webp" alt="Screenshot for tutorial">
-p)Now you already have your movie ID (in the url) and the Authorization Bearer (in the headers)
-From there, search for "cenc"
-<img src="https://ipfs.io/ipfs/QmWCGJdDm2BJNfvpZqJ1BEyzETjhaSXZyPXGmRaUgQs24k/chrome_U8o6SZglfY.webp" alt="Screenshot for tutorial">
-Now copy the value for the header "dt-custom-data: " and paste it into the corresponding one in the script.
+2. Replace all the 'ADDHERE' strings with the relevant data, you can get it by watching your network traffic when streaming a movie from MUBI. You can get most of these elements from a single URL, for example, filter for the word "viewing" and you'll get this:
+
+    ![Screenshot for tutorial](https://ipfs.io/ipfs/Qmay9U6SVYjexUkZyDiyNoyDNXgwiAgYD833avk48pURxk/chrome_ZmPg6AOny9.webp)
+
+    Now you already have your movie ID (in the url) and the Authorization Bearer (in the headers). From there, search for "cenc":
+
+    ![Screenshot for tutorial](https://ipfs.io/ipfs/QmWCGJdDm2BJNfvpZqJ1BEyzETjhaSXZyPXGmRaUgQs24k/chrome_U8o6SZglfY.webp)
+
+    Now copy the value for the header "dt-custom-data: " and paste it into the corresponding one in the script.
+
 3. Edit the folder paths (in the code) to your needs.
-3. Open your terminal and navigate to the directory containing the `mubi_downloader.py` file. (or add it to PATH)
-4. Run the following command in your terminal:
-python mubi_downloader.py
-5. If you entered all the details correctly, your movie will start downloading.
+4. Open your terminal and navigate to the directory containing the `mubi_downloader.py` file. (or add it to PATH)
+5. Run the following command in your terminal:
+
+    ```
+    python mubi_downloader.py
+    ```
+
+6. If you entered all the details correctly, your movie will start downloading.
 
 ## Legal Notice
 - This program is intended solely for educational and informational purposes. The authors and contributors of this program do not condone or encourage any illegal or unethical activities. Any misuse of this program for unlawful or unethical purposes is strictly prohibited.
