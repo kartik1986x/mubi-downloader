@@ -21,8 +21,8 @@ python mubi_downloader.py
 5. If you entered all the details correctly, your movie will start downloading.
 
 ## Legal Notice
-This script is intended for personal use only. The Mubi terms of service explicitly prohibit the downloading and/or redistribution of their content. Please respect the intellectual property rights of the creators and owners of the content.
+This program is intended to be used solely for educational purposes. It is important to note that this program is not intended to be used for illegal or unethical purposes, such as pirating copyrighted material.
 
-This script is provided "as is" without warranty of any kind. The developers of this script do not accept any responsibility or liability for the use of this script, including but not limited to any damages or losses arising from its use. By using this script, you agree to assume all risks associated with its use.
+The author of this program, as well as any parties affiliated with the creation or distribution of this program, disclaim any responsibility for any unlawful use or misapplication of this program. The program is provided "as is" and without warranty of any kind, either express or implied, including, but not limited to, the implied warranties of merchantability, fitness for a particular purpose, or non-infringement.
 
-This script may use third-party libraries and APIs, which are subject to their own licenses and terms of use. Please review the licenses and terms of use of any third-party libraries and APIs used by this script before using this script.
+By using this program, you agree to use it responsibly and within the bounds of the law. Any illegal or unethical use of this program is strictly prohibited and may result in legal action.
