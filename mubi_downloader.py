@@ -14,7 +14,6 @@ headers = {
     'authority': 'api.mubi.com',
     'accept': '*/*',
     'accept-language': 'en',
-    'anonymous_user_id': 'ADDHERE', # add yours here
     'authorization': 'Bearer ADDHERE', # add yours here
     'client': 'web',
     'client-accept-audio-codecs': 'aac',
@@ -75,7 +74,7 @@ headers = {
 
 # Set the JSON data for the request
 json_data = {
-    'license': 'https://lic.drmtoday.com/license-proxy-widevine/cenc/?specConform=true',  # Set the license URL
+    'license': 'https://lic.drmtoday.com/license-proxy-widevine/cenc/?specConform=true',
     'headers': 'dt-custom-data: ADDHERE', # add yours here
     'pssh': f'{pssh}',                                                
     'buildInfo': '',                                                 
@@ -98,7 +97,7 @@ os.system(fr'N_m3u8DL-RE "{mubi}" --auto-select --save-name "{name}" --auto-sele
 # Run shaka-packager to decrypt the video file
 os.system(fr'shaka-packager in="E:\uncomplete\{name}.mp4",stream=video,output=E:\uncomplete\{name}\decrypted-video.mp4 --enable_raw_key_decryption --keys {decryption_key}')  # The decrypted video file will be saved in E:\uncomplete\{name}\decrypted-video.mp4
 
-# Set the folder path to the directory where the audio files are located
+# Set the folder path to the directory where the audio file is located
 folder_path = f"E:/uncomplete"
 
 # Define a regex pattern to match the audio file names
